@@ -1,7 +1,7 @@
 import sys
 from datetime import datetime
 
-from commands import *
+from request import *
 from GUI.cmdDLgui import Ui_MainWindow
 from PyQt5 import QtCore, QtGui, QtWidgets
 
