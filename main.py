@@ -2,6 +2,7 @@ import sys
 from datetime import datetime
 
 from request import *
+from commands import *
 from GUI.cmdDLgui import Ui_MainWindow
 from PyQt5 import QtCore, QtGui, QtWidgets
 
@@ -20,9 +21,9 @@ class MyWin(QtWidgets.QMainWindow):
 
         if listCommand[0] == "help":
             if timeInfoCheck() == 'True':
-                self.ui.textBrowser.append(f"\n[{datetime.now()}]\nI help you!!!")
+                self.ui.textBrowser.append(f"\n[{datetime.now()}]\n{helpCmd()}")
             elif timeInfoCheck() == 'False':
-                self.ui.textBrowser.append(f"\nI help you!!!")
+                self.ui.textBrowser.append(f"\n{helpCmd()}")
             else:
                 self.ui.textBrowser.append("\nError")
 
